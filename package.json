@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
+    "deploy": "wrangler pages deploy public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -21,6 +22,4 @@
   "devDependencies": {
     "nodemon": "^3.1.11"
   }
-  
-
 }
