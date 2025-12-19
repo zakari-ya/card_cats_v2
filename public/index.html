@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cat Cards</h1>
+        <div class="header-actions">
+            <input id="search" type="search" placeholder="Search...">
+            <select id="filter-tag">
+                <option value="">All Tags</option>
+            </select>
+            <button id="open-add" class="hidden">+ Add Cat</button>
+            <button id="open-login">Login</button>
+            <button id="logout" class="hidden">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="cards" class="cards"></div>
+        <div id="pagination" class="pagination">
+            <!-- Pagination controls -->
+        </div>
+    </main>
+
+    <div id="add-modal" class="modal hidden">
+        <form id="add-form" class="card-form">
+            <h2>Add / Edit Cat</h2>
+            <input type="hidden" id="cat-id">
+            <label>Name<input id="name" required></label>
+            <label>Tag<input id="tag"></label>
+            <label>Description<textarea id="descrpt"></textarea></label>
+            <label>Image URL<input id="img"></label>
+            <div class="form-actions">
+                <button type="submit" id="save">Enregistrer</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="auth-modal" class="modal hidden">
+        <form id="auth-form" class="card-form">
+            <h2 id="auth-title">Login</h2>
+            <label>Username<input id="auth-username" required></label>
+            <label>Password<input id="auth-password" type="password" required></label>
+            <div class="form-actions">
+                <button type="submit" id="auth-submit">Login</button>
+                <button type="button" id="auth-cancel">Cancel</button>
+            </div>
+            <p style="margin-top: 1rem; text-align: center;">
+                <a href="#" id="toggle-auth-mode">Need an account? Register</a>
+            </p>
+        </form>
+    </div>
+
+    <div id="confirm-modal" class="modal hidden">
+        <div class="confirm-box">git
+            <p class="confirm-message"></p>
+            <div class="confirm-actions">
+                <button class="confirm-yes">Yes</button>
+                <button class="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>ECHO is on.
